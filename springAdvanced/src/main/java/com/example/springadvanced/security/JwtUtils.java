@@ -25,9 +25,11 @@ public class JwtUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
     @Value("======================BezKoder=Spring===========================")
+    //@Value(value = jwtSecret)
     private String jwtSecret;
 
     @Value("86400000")
+    //@Value(value = jwtExpirationMs)
     private int jwtExpirationMs;
 
     public String generateJwtToken(Authentication authentication) {
